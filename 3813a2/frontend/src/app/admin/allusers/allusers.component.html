@@ -1,0 +1,60 @@
+<div class="nav">
+  <div class="nav-items">
+    <div class="nav-logo" routerLink="/admin">Admin Center</div>
+    <div class="nav-item " routerLink="/admin">Home</div>
+    <div class="nav-item active" routerLink="/admin/users">Users</div>
+  </div>
+
+  <div class="nav-user-info">
+    <div class="user-info">
+      <div class="name">Kyz_ul <span class="role">[group admin]</span></div>
+      <a class="name">logout</a>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="position"><span class="position-item">Home</span> / <span class="position-item">All Users</span></div>
+  <div class="btns">
+    <button class="cus_btn" (click)="showModal()">Create User</button>
+    <button class="cus_btn" (click)="showModal()">Remove All Users</button>
+  </div>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Group1</td>
+      <td>1140182402@qq.com</td>
+      <td>Group Admin</td>
+      <td style="width: 20%">
+        <a href="#">Set Admin</a>
+        <a href="#">Delete</a>
+      </td>
+    </tr>
+
+  </table>
+</div>
+<div *ngIf="modalStatus" class="cus_modal">
+  <div class="cus_modal_body" id="modal">
+    <div class="modal_header">Create User</div>
+    <div class="modal_content">
+      <input type="text" placeholder="Enter UserName">
+      <input type="email" placeholder="Enter Email">
+      <input type="password" placeholder="Enter Password">
+      <select>
+        <option>User(Normal)</option>
+        <option>Group Admin</option>
+        <option>Group Assis</option>
+      </select>
+      <div class="btns">
+        <button class="cus_btn">Create</button>
+        <button class="cus_btn" (click)="hideModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

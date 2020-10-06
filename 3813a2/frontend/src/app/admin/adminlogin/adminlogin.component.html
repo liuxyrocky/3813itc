@@ -1,0 +1,15 @@
+
+<form (submit)="login()">
+  <h1>Admin Login</h1>
+  <div class="form-item">
+    <label>Account</label>
+    <input [(ngModel)]="formData.username" name="username" required class="input" type="text" placeholder="Account">
+  </div>
+  <div class="form-item">
+    <label>Password</label>
+    <input [(ngModel)]="formData.password" name="password" required class="input" type="password"
+           placeholder="Password">
+  </div>
+  <p style="color: red">{{error}}</p>
+  <input class="submit" type="submit" value="Login">
+</form>

@@ -1,0 +1,73 @@
+td a {
+  margin: 0 10px;
+}
+
+.main {
+  width: 90%;
+  margin: 10px auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  height: 35px;
+  line-height: 25px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+th {
+  background: #dcdee2;
+  height: 40px;
+  font-weight: bold;
+}
+
+tr {
+  background: #fff;
+}
+
+tr:hover {
+  background: #19be6b;
+  color: white;
+  cursor: pointer;
+}
+
+td a {
+  color: #06f;
+  text-decoration: none;
+}
+
+td a:hover {
+  color: #06f;
+  text-decoration: underline;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 3%;
+  width: 100%;
+  background-color: #f8f8f9;
+}
+.nav-logo{
+  font-weight: bold;
+  font-size: 25px;
+  color: #515a6e;
+}
+.name{
+  margin: 0 5px;
+}
+.user-info{
+  display: flex;
+  flex-direction: row;
+}
+.role{
+  color: #cccccc;
+}
+

@@ -1,0 +1,45 @@
+<div class="nav">
+  <div class="nav-items">
+    <div class="nav-logo" routerLink="/admin">Admin Center</div>
+    <div class="nav-item active" routerLink="/admin">Home</div>
+    <div class="nav-item" routerLink="/admin/users">Users</div>
+  </div>
+  <div class="nav-user-info">
+    <div class="user-info">
+      <div class="name">{{userinfo.username}} <span class="role">[{{adminType[userinfo.role]}}]</span></div>
+      <a class="name">logout</a>
+    </div>
+  </div>
+</div>
+<div class="main">
+
+  <div class="position"><span class="position-item">Home / All Groups</span></div>
+  <button [disabled]="!get_permission('add group')" class="cus_btn" (click)="showModal()">Add Group</button>
+  <table>
+    <tr>
+      <th style="width: 200px">ID</th>
+      <th>GroupName</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let group of groups;let i = index">
+      <td>{{i+1}}</td>
+      <td>{{group.name}}</td>
+      <td style="width: 20%">
+        <a routerLink="/admin/channel" [queryParams]="{gid:group._id,name:group.name}">View Channel</a>
+        <button (click)="deleteGroup(group._id)" [disabled]="!get_permission('remove group')" class="cus_btn">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<div *ngIf="modalStatus" class="cus_modal">
+  <div class="cus_modal_body" id="modal">
+    <div class="modal_header">Add Group</div>
+    <div class="modal_content">
+      <input [(ngModel)]="groupName" placeholder="Enter Group Name">
+      <div class="btns">
+        <button class="cus_btn" (click)="add_group()">Add</button>
+        <button class="cus_btn" (click)="hideModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
