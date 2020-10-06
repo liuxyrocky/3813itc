@@ -50,6 +50,6 @@ export class RegisterComponent implements OnInit {
     reader.onload = function(e: any) {
       self.formData.avatar = e.target.result;
     };
-    this.imgsrc = window.URL.createObjectURL(file); // 获取上传的图片临时路径
+    this.imgsrc = window.URL.createObjectURL(file); // Gets the temporary path to the uploaded image
   }
 }
