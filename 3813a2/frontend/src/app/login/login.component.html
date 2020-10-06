@@ -1,16 +1,16 @@
 
-<form (submit)="login()">
-  <h1>Chatting Online</h1>
-  <div class="form-item">
-    <label>Account</label>
-    <input [(ngModel)]="formData.username" name="username" required class="input" type="text" placeholder="Account">
-  </div>
-  <div class="form-item">
-    <label>Password</label>
-    <input [(ngModel)]="formData.password" name="password" required class="input" type="password"
-           placeholder="Password">
-  </div>
-  <p style="color: red">{{error}}</p>
-  <p><span class="active"><a [routerLink]="['/register']" class="active">Register</a></span></p>
-  <input class="submit" type="submit" value="Enter Room">
-</form>
+      <form (submit)="login()">
+        <h1>Chatting Online</h1>
+        <div class="form-item">
+          <label>Account</label>
+          <input [(ngModel)]="formData.username" name="username" required class="input" type="text" placeholder="Account">
+        </div>
+        <div class="form-item">
+          <label>Password</label>
+          <input [(ngModel)]="formData.password" name="password" required class="input" type="password"
+                 placeholder="Password">
+        </div>
+        <p style="color: red">{{error}}</p>
+        <p><span class="active"><a [routerLink]="['/register']" class="active">Register</a></span></p>
+        <input class="submit" type="submit" value="Enter Room">
+      </form>
