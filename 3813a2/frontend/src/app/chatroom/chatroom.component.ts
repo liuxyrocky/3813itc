@@ -81,7 +81,7 @@ export class ChatroomComponent implements OnInit {
         this.handleSocket(data.type, data.data, data);
       },
       err => console.log(err),
-      () => console.log('流已经结束') //  最后结束后，会执行到这的
+      () => console.log('流已经结束') //  And when we're done, we're going to do it here
     );
   }
 
